@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        nav
+            div.brand
+                h1.name
+                    a(href='/') Anything
+            if(currentUser)
+                a(href='/logout') Log out
+                a(href='/user') #{currentUser.username}
+            else
+                a(href='/signup') Sign Up
+                a(href='/login') Log In
+        .container
+            block content
+        script(src='/javascripts/script.js')

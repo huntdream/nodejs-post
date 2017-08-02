@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    ul.userlist
+        each user,index in users
+            li #{user.username}
+                span=user.createTime

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+   div.post-bar
+       div(class='post-input' id='post-input' contenteditable)
+       button(class='btn post-btn' id='post-btn') Post
+   div(class='post-wrapper' id='post-wrapper')
+           each post in posts
+               div.post !{post.article}
+
